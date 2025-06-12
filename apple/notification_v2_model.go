@@ -86,12 +86,14 @@ func (d *NotificationV2Payload) DecodeTransactionInfo() (ti *TransactionInfo, er
 
 // https://developer.apple.com/documentation/appstoreservernotifications/data
 type Data struct {
-	AppAppleID            int    `json:"appAppleId"`
-	BundleID              string `json:"bundleId"`
-	BundleVersion         string `json:"bundleVersion"`
-	Environment           string `json:"environment"`
-	SignedRenewalInfo     string `json:"signedRenewalInfo"`
-	SignedTransactionInfo string `json:"signedTransactionInfo"`
+	AppAppleID               int    `json:"appAppleId"`
+	BundleID                 string `json:"bundleId"`
+	BundleVersion            string `json:"bundleVersion"`
+	ConsumptionRequestReason string `json:"consumptionRequestReason"`
+	Environment              string `json:"environment"`
+	SignedRenewalInfo        string `json:"signedRenewalInfo"`
+	SignedTransactionInfo    string `json:"signedTransactionInfo"`
+	Status                   int    `json:"status"`
 }
 
 // RenewalInfo https://developer.apple.com/documentation/appstoreservernotifications/jwsrenewalinfodecodedpayload
